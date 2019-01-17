@@ -7,13 +7,28 @@ int main(int argc, char* args[]) {
     //
     // Surface Area: 600
     // Volume: 1000
-    double a = 10;
 
+    double a;
+    double b;
+    double c;
 
-    std::cout << "Surface Area: ";
-    std::cout << a*a*6 << std::endl;
+    std::cout << "Give the lenght of one side: ";
 
-    std::cout << "Volume: ";
-    std::cout << a*a*a << std::endl;
+    std::cin >> a;
+
+    std::cout << "Give the lenght of another side: ";
+
+    std::cin >> b;
+
+    std::cout << "Give the lenght of the third side ";
+
+    std::cin >> c;
+
+    double surface = 2*(a*b+b*c+a*c);
+    double volume = a*b*c;
+
+    std::cout << "The surface of the cuboid is: " << surface << "." << std::endl;
+    std::cout << "The volume of the cuboid is: " << volume << "." << std::endl;
+
     return 0;
 }
