@@ -9,7 +9,7 @@ int main(int argc, char* args[]) {
     float miles;
     std::cout << "How many km-s did you bike today?" << std::endl;
     std::cin >> km;
-    miles = km*1.6;
+    miles = km/1.6;
     std::cout << "This means you've biked ";
     std::cout << miles;
     std::cout << " miles." << std::endl;
