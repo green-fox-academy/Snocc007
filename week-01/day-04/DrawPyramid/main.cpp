@@ -7,22 +7,21 @@ int main(int argc, char *args[]) {
     std::cin >> a;
     std::string star = "*";
     std::string space = " ";
-    int s = 1;
 
 
+        for (int i = 0; i < a; i++) {
 
-        for (int j = 0; j < a; j++){
-
-            for (int k = s; k < a; k++){
+            for (int x = i; x < a; x++) {
 
                 std::cout << space;
             }
-            std::cout << star << std::endl;
-            star = star + "**";
-            s++;
+            for (int j = 0; j <= i * 2; j++) {
+                std::cout << star;
+
+            }
+            std::cout << std::endl;
+
         }
-
-
 
 
 
