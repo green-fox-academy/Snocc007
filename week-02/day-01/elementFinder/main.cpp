@@ -6,7 +6,7 @@ std::string containsSeven(const std::vector<int>& numbers) {
     std::string gotit;
     std::vector<int>::iterator findResult;
     int thing = 7;
-    findResult = std::find(lookAt.begin(), lookAt.end(), thing);
+    findResult = std::find(lookAt.begin(), lookAt.end(), tFihing);
 
     if (findResult == lookAt.end()) {
         gotit = "Noooooo";
