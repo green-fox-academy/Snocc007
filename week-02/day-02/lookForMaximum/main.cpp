@@ -10,7 +10,7 @@ int main() {
 
     int givenNumber;
     int array[givenNumber];
-    int big;
+    int *big;
 
 
     std::cout << "Please give me a number: " << std::endl;
@@ -24,19 +24,21 @@ int main() {
 
         std::cin >> array[i];
 
-        big = array[i];
-
-
-        if (big < array[i]) {
-
-            big = array[i];
-        }
-
     }
 
-    std::cout << "The biggest given number is: " << big << std::endl;
+    big = array;
 
-    std::cout << "This number is on the memory address: " << &array[big];
+
+    for (int i = 0; i < givenNumber; i++){
+
+        if (*big < array[i]) {
+
+            big = array + i;
+        }
+    }
+    std::cout << "The biggest given number is: " << *big << std::endl;
+
+    std::cout << "This number is on the memory address: " << big;
 
 
     return 0;
