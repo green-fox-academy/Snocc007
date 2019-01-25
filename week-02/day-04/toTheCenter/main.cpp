@@ -113,8 +113,8 @@ int main( int argc, char* args[] ) {
     //Event handler
     SDL_Event e;
 
-    int state = 0;
-
+    int state = 0;                                  // declaring variable for the state of randomization
+                                                    // at this point there is NO randomization yet
     //While application is running
     while( !quit ) {
         //Handle events on queue
@@ -129,7 +129,7 @@ int main( int argc, char* args[] ) {
         SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
         SDL_RenderClear(gRenderer);
 
-      //  draw();
+       draw();
 
 
 
@@ -137,32 +137,33 @@ int main( int argc, char* args[] ) {
         if (state == 0) {
 
 
-            x.push_back(a);
-            y.push_back(b);
+            x.push_back(a);             // putting user input as 1st vector "x" with vertical starting point coordinates
+            y.push_back(b);             // putting user input as 1st vector "y" with horizontal starting point coordinates
 
 
 
-            state++;
-
+            state++;                    // incrementing the state of randomization
+                                        // at this point randomization (for starting coordinates) started
 
         } else if (state ==1 ){
 
             for (int j = 0; j < c - 1; j++) {
 
-                a = rand() % 630 + 1;
-                b = rand() % 479 + 1;
+                a = rand() % 630 + 1;     // getting random vertical starting point coordinates
+                b = rand() % 479 + 1;     // getting random horizontal starting point coordinates
 
                 x.push_back(a);
                 y.push_back(b);
 
             }
 
-            state ++;
+            state ++;                   // incrementing again the state of randomization
+                                        // randomization (for starting coordinates) STOPs at this point
 
 
         } else {
 
-            for (int i = 0; i < c; i++) {
+            for (int i = 0; i < c; i++) {       // drawing the lines
 
                 SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0x00, 0xFF);
                 SDL_RenderDrawLine(gRenderer, x.at(i), y.at(i), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
