@@ -33,19 +33,21 @@ void draw()
 {
     for (int i = 1; i <= 20; i++) {
 
+        int a = SCREEN_WIDTH/2;
+        int b = SCREEN_HEIGHT/2;
 
 
         SDL_SetRenderDrawColor(gRenderer, 255, 255, 0, 0xFF);
-        SDL_RenderDrawLine(gRenderer, (SCREEN_WIDTH-SCREEN_WIDTH/2)/20*i, SCREEN_HEIGHT-SCREEN_HEIGHT/2, SCREEN_WIDTH/2, (SCREEN_HEIGHT/2)-SCREEN_HEIGHT/20*i/2);
+        SDL_RenderDrawLine(gRenderer, (SCREEN_WIDTH-a)/20*i, SCREEN_HEIGHT-b, SCREEN_WIDTH/2, b-b/20*i);
 
         SDL_SetRenderDrawColor(gRenderer, 0, 255, 0, 0xFF);
-        SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/2-SCREEN_WIDTH/20*i/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT-SCREEN_HEIGHT/20*i/2);
+        SDL_RenderDrawLine(gRenderer, a-a/20*i, b, a, SCREEN_HEIGHT-b/20*i);
 
         SDL_SetRenderDrawColor(gRenderer, 255, 255, 0, 0xFF);
-        SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/2, SCREEN_HEIGHT/2+((SCREEN_HEIGHT/2/20)*(20-i)), SCREEN_WIDTH/2+SCREEN_WIDTH/2/20*i, SCREEN_HEIGHT/2);
+        SDL_RenderDrawLine(gRenderer, a, b+(b/20)*(20-i), a+a/20*i, b);
 
         SDL_SetRenderDrawColor(gRenderer, 0, 255, 0, 0xFF);
-        SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/2, SCREEN_HEIGHT/2-SCREEN_HEIGHT/2/20*(20-i), SCREEN_WIDTH/2+SCREEN_WIDTH/2/20*i, SCREEN_HEIGHT/2);
+        SDL_RenderDrawLine(gRenderer, a, b-b/20*(20-i), a+a/20*i, b);
     }
 
 
