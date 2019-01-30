@@ -11,7 +11,7 @@
 class Animal {
 
 public:
-    Animal(int hungry = 50, int thirsty = 50);
+    Animal();
 
     void eat();
 

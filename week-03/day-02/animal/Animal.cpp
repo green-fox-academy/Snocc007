@@ -4,12 +4,15 @@
 
 #include "Animal.h"
 #include <string>
+#include <iostream>
 
-Animal::Animal(int hungry, int thristy) {
-    hunger = hungry;
-    thirst = thristy;
+Animal::Animal() {
 
-}
+    hunger = 50;
+    thirst = 50;
+
+};
+
 
 void Animal::eat() {
 
