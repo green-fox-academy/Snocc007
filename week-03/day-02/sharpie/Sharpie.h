@@ -11,7 +11,7 @@
 class Sharpie {
 
 public:
-    Sharpie(std::string color, float width, int ink = 100);
+    Sharpie(std::string color, float width);
 
     void use();
 

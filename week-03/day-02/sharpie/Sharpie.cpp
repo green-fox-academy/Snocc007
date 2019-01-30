@@ -5,11 +5,11 @@
 #include "Sharpie.h"
 #include <string>
 
-Sharpie::Sharpie(std::string color_, float width_, int ink) {
+Sharpie::Sharpie(std::string color_, float width_) {
 
     color = color_;
     width = width_;
-    inkAmount = ink;
+    inkAmount = 100;
 
 
 }
