@@ -5,14 +5,18 @@
 
 
 
-int numberOfEars(int hunnyBunny) {
+int numberOfEars(int hunnyBunny, int ears) {
+
+
 
     if (hunnyBunny == 1) {
 
-        return 1;
+
+        return ears;
+
     } else {
 
-        return 2 * (numberOfEars(hunnyBunny - 1));
+        return ears + (numberOfEars(hunnyBunny - 1 , ears));
     }
 
 }
@@ -20,10 +24,11 @@ int numberOfEars(int hunnyBunny) {
 int main() {
 
     int numberOfBunnies;
+    int floppyEars = 2;
     std::cout << "How many bunnies are there? ";
     std::cin >> numberOfBunnies;
 
-    std::cout << "I can see " << numberOfEars(numberOfBunnies) << " floppy ears... " << std::endl;
+    std::cout << "I can see " << numberOfEars(numberOfBunnies, floppyEars) << " floppy ears... " << std::endl;
 
     return 0;
 }
