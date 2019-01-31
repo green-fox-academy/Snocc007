@@ -16,8 +16,9 @@ Station::Station(int gasAmountStation) {
 // fill(car) -> fills 1 unit of gas until the car is on full. Every time it transfers 1 unit it should print
 // "Filling car!" on the console. When the car is full it should print the remaining gas amount of the station
 
-void Station::fill(Car &carName) {
+void Station::fill(Car &carName)
 
+{
     if (!carName.isFull()) {
         carName.fill();
         std::cout << "Filling vehicle..." << std::endl;

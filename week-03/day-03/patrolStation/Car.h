@@ -5,6 +5,7 @@
 #ifndef PATROLSTATION_CAR_H
 #define PATROLSTATION_CAR_H
 
+#include <string>
 
 class Car {
 
@@ -12,8 +13,9 @@ public:
     Car(int _gasAmountCar, int _capacity);
 
     int fill();
-
     bool isFull();
+
+
 
 private:
 

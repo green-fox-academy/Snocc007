@@ -4,7 +4,8 @@
 
 #include "Car.h"
 
-Car::Car(int _gasAmountCar, int _capacity) {
+Car::Car(int _gasAmountCar, int _capacity)
+{
 
     gasAmountCar = _gasAmountCar;
     capacity = _capacity;
@@ -13,7 +14,8 @@ Car::Car(int _gasAmountCar, int _capacity) {
 
 }
 
-bool Car::isFull() {
+bool Car::isFull()
+{
 
     if (gasAmountCar == capacity) {
         full = true;
@@ -24,7 +26,8 @@ bool Car::isFull() {
 }
 
 
-int Car::fill() {
+int Car::fill()
+{
 
     gasAmountCar++;
 

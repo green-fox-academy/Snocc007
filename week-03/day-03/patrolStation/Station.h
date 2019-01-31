@@ -13,13 +13,10 @@ class Station {
 
 public:
     Station(int gasAmountStation = 10000);
-
     void fill(Car &carName);
-
 
 private:
     int _gasAmountStation;
-
 
 };
 
