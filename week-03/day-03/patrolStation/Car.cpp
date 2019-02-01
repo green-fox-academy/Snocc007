@@ -17,7 +17,7 @@ Car::Car(int _gasAmountCar, int _capacity)
 bool Car::isFull()
 {
 
-    if (gasAmountCar == capacity) {
+    if (gasAmountCar == capacity){
         full = true;
     }
     return full;

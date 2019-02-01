@@ -7,7 +7,8 @@
 #include <string>
 #include <iostream>
 
-Station::Station(int gasAmountStation) {
+Station::Station(int gasAmountStation)
+{
 
     _gasAmountStation = gasAmountStation;
 
