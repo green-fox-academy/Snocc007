@@ -7,7 +7,9 @@
 
 
 BlogPost::BlogPost(std::string authName, std::string titleText,
-                    std::string commentText, std::string dateOfPublication) {
+                    std::string commentText, std::string dateOfPublication)
+
+{
 
     authorName = authName;
     title = titleText;
