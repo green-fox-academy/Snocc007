@@ -5,7 +5,8 @@
 #include "Sharpie.h"
 #include <string>
 
-Sharpie::Sharpie(std::string color_, float width_) {
+Sharpie::Sharpie(std::string color_, float width_)
+{
 
     color = color_;
     width = width_;
@@ -14,12 +15,14 @@ Sharpie::Sharpie(std::string color_, float width_) {
 
 }
 
-void Sharpie::use() {
+void Sharpie::use()
+{
 
     inkAmount--;
 }
 
-std::string Sharpie::sharpieState() {
+std::string Sharpie::sharpieState()
+{
 
     std::string state = "The ink state of the " + color + ", " + std::to_string(width)
             + " wide sharpie is: " + std::to_string(inkAmount) + " %.";
