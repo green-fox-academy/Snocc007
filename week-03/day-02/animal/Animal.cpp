@@ -6,7 +6,8 @@
 #include <string>
 #include <iostream>
 
-Animal::Animal() {
+Animal::Animal()
+{
 
     hunger = 50;
     thirst = 50;
@@ -14,7 +15,8 @@ Animal::Animal() {
 };
 
 
-void Animal::eat() {
+void Animal::eat()
+{
 
     // int hungry;
     hunger--;
@@ -22,14 +24,16 @@ void Animal::eat() {
 
 }
 
-void Animal::drink() {
+void Animal::drink()
+{
 
 
     thirst--;
 
 }
 
-void Animal::play() {
+void Animal::play()
+{
 
 
     hunger++;
@@ -37,7 +41,8 @@ void Animal::play() {
 
 }
 
-std::string Animal::getState() {
+std::string Animal::getState()
+{
     std::string state = "Hunger: " + std::to_string(hunger) + " , Thirst: " + std::to_string(thirst);
     return state;
 
