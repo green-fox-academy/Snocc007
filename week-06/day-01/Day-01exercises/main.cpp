@@ -1,5 +1,14 @@
 #include<stdio.h>
 #include <string>
+#include <stdlib.h>
+#define PI 3.14
+
+
+double areaOfCircle(double radius){
+    double area;
+    area = radius * radius * PI;
+    return area;
+}
 
 int main()
 {
@@ -97,5 +106,44 @@ int main()
     double volume = cuboidA * cuboidB * cuboidC;
     printf("Surface Area: %.2lf\n", surface);
     printf("Volume: %.2lf\n", volume);
+
+    // GUESS THE NUMBER
+
+    // Write a program that stores a number, and the user has to figure it out.
+    // The user can input guesses, after each guess the program would tell one
+    // of the following:
+    //
+    // The stored number is higher
+    // The stored number is lower
+    // You found the number: 8
+
+    int number = 8;
+    int guess;
+
+    printf("Guess the number: \n");
+    scanf("%d", &guess);
+    if (guess != number) {
+        while (guess != number) {
+            if (guess > number) {
+                printf("The stored number is lower.\n");
+                printf("Guess again: \n");
+                scanf("%d", &guess);
+            } else if (guess < number) {
+                printf("The stored number is higher.\n");
+                printf("Guess again: \n");
+                scanf("%d", &guess);
+            }
+        }
+    }
+    printf("You found the number: %d.\n", number);
+
+
+    // define a variable called PI with the value of 3.14
+    // create a function which takes the radius of a circle as a parameter
+    // and return the area of that cirle
+    // area = radius * radius * PI
+
+    printf("%.3lf", areaOfCircle(5.5));
+
     return 0;
 }
