@@ -11,7 +11,7 @@ int main()
     printf("How old are you?\n");
     scanf("%d", &ageOfUser);
 
-    if(isOldEnough(ageOfUser)) {
+    if (isOldEnough(ageOfUser)) {
         printf("Let's get wasted!\n");
     } else {
         printf("Not now, baby...\n");
@@ -22,6 +22,6 @@ int main()
 
 int isOldEnough(int age)
 {
-    return age >=18;
+    return age >= 18;
 
 }
